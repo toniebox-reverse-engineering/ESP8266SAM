@@ -32,6 +32,7 @@ void ESP8266SAM::OutputByteCallback(void *cbdata, unsigned char b)
   sam->OutputByte(b);
 }
 
+static void yield() { /* NOOP */ }
 void ESP8266SAM::OutputByte(unsigned char b)
 {
   // Xvert unsigned 8 to signed 16...
